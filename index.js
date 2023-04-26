@@ -1,5 +1,13 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  let foundTarget = false
+  for (let i = 0; i<array.length; i++){
+    for (let j = i+1; j<array.length; j++){
+          if(array[i] + array[j] === target){
+            foundTarget = true;
+          }
+    }
+  }
+  return foundTarget;
 }
 
 /* 
@@ -11,7 +19,7 @@ function hasTargetSum(array, target) {
 */
 
 /*
-  Add written explanation of your solution here
+  Iterate through array and see if sum of any two numbers in an array equal the target
 */
 
 // You can run `node index.js` to view these console logs
